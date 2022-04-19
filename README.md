@@ -10,3 +10,8 @@
 на localhost:port должно быть доступно приложение в контейнере (оно отвечает Hello, World!).
 
 Сохраните получившийся Dockerfile в любом публичном Git репозитории, например GitHub, и пришлите ссылку на репозиторий.
+
+### Running commands
+docker build -t hello-world .
+docker run -d --rm --name=test -p 192.168.1.25:8080:8080 hello-world
+curl 192.168.1.25:8080
